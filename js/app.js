@@ -104,20 +104,22 @@ class Persona {
 }
 
 let persona = new Persona;
-const nombre = document.querySelector("#nombre")
-const edad = document.querySelector("#edad")
-const dni = document.querySelector("#dni")
-const sexo = document.querySelector("#sexo")
-const peso = document.querySelector("#peso")
-const altura = document.querySelector("#altura")
-const anioNacimiento = document.querySelector("#anioNacimiento")
+
 
 
 function crearPersona() {
     let btnCrear = document.querySelector("#btnCrear")
-
+    const nombre = document.querySelector("#nombre")
+    const edad = document.querySelector("#edad")
+    const dni = document.querySelector("#dni")
+    const sexo = document.querySelector("#sexo")
+    const peso = document.querySelector("#peso")
+    const altura = document.querySelector("#altura")
+    const anioNacimiento = document.querySelector("#anioNacimiento")
+    
     btnCrear.innerHTML = 'Datos Cargados!';
     btnCrear.disabled = true;
+
     persona = new Persona(nombre.value, edad.value, dni.value, sexo.value, peso.value, altura.value, anioNacimiento.value);
     console.log(persona)
 
