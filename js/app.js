@@ -108,6 +108,7 @@ let persona = new Persona;
 
 
 function crearPersona() {
+    let input = document.getElementsByTagNameNS("input")
     let btnCrear = document.querySelector("#btnCrear")
     const nombre = document.querySelector("#nombre")
     const edad = document.querySelector("#edad")
@@ -117,15 +118,17 @@ function crearPersona() {
     const altura = document.querySelector("#altura")
     const anioNacimiento = document.querySelector("#anioNacimiento")
     
-    btnCrear.innerHTML = 'Datos Cargados!';
-    btnCrear.disabled = true;
-
-    persona = new Persona(nombre.value, edad.value, dni.value, sexo.value, peso.value, altura.value, anioNacimiento.value);
-    console.log(persona)
-
-    persona.mostrarDatos()
-
-    return persona
+    
+        btnCrear.innerHTML = 'Datos Cargados!';
+        btnCrear.disabled = true;
+    
+        persona = new Persona(nombre.value, edad.value, dni.value, sexo.value, peso.value, altura.value, anioNacimiento.value);
+        console.log(persona)
+    
+        persona.mostrarDatos()
+    
+        return persona
+   
 }
 
 
