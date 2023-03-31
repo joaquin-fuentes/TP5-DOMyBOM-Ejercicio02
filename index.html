@@ -2,14 +2,14 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/estilos.css">
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/estilos.css" />
     <title>TP 5 - Ejercicio 2</title>
-    <link rel="icon" href="./img/nro2.png">
+    <link rel="icon" href="./img/nro2.png" />
 </head>
 
 <body>
@@ -17,52 +17,60 @@
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
-                    <img src="./img/nro2.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+                    <img src="./img/nro2.png" alt="Logo" width="30" class="d-inline-block align-text-top" />
                     Ejercicio 2
                 </a>
             </div>
         </nav>
     </header>
     <main class="container my-5">
-        
-        <form class="row border rounded p-5">
+        <form class="row border border-primary rounded p-5 m-2" >
             <h1 class="mb-5 text-center">Cargar Datos</h1>
             <div class="mb-3 col-md-6 col-lg-5">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" minlength="4" maxlength="40" required>
+                <input type="text" class="form-control border border-primary-subtle" id="nombre" minlength="4"
+                    maxlength="40" required />
             </div>
             <div class="mb-3 col-md-6 col-lg-3">
                 <label for="edad" class="form-label">Edad:</label>
-                <input type="number" class="form-control" id="edad" minlength="1" maxlength="2" required>
+                <input type="number" class="form-control border border-primary-subtle" id="edad" min="1"
+                    max="120" required />
             </div>
             <div class="mb-3 col-md-6 col-lg-4">
                 <label for="dni" class="form-label">DNI:</label>
-                <input type="number" class="form-control" id="dni" minlength="7" maxlength="8" required>
+                <input type="text" class="form-control border border-primary-subtle" id="dni" minlength="7"
+                    maxlength="8" required />
             </div>
-            <div class="mb-3 col-md-6 col-lg-4">
-                <label for="sexo" class="form-label">Sexo:</label>
-                <input type="text" class="form-control" id="sexo">
+            <div class="mb-3 col-md-6 col-lg-3">
+                <label for="sexo" class="form-label me-3">Sexo:</label> <br />
+                <select id="sexo" class="form-select border-primary-subtle">
+                    <option value="">Seleccionar un sexo</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
             </div>
-            <div class="mb-3 col-md-6 col-lg-4">
-                <label for="peso" class="form-label">Peso:</label>
-                <input type="numer" class="form-control" id="peso">
+            <div class="mb-3 col-md-4 col-lg-3">
+                <label for="peso" class="form-label">Peso (kg):</label>
+                <input type="numer" class="form-control border-primary-subtle" id="peso" min="20" max="200" required />
             </div>
-            <div class="mb-3 col-md-6 col-lg-4">
-                <label for="altura" class="form-label">Altura</label>
-                <input type="number" class="form-control" id="altura">
+            <div class="mb-3 col-md-4 col-lg-3">
+                <label for="altura" class="form-label">Altura (cm):</label>
+                <input type="number" class="form-control border-primary-subtle" id="altura" min="100" max="250" required />
             </div>
-            <div class="mb-3 col-md-6 col-lg-4">
+            <div class="mb-3 col-md-4 col-lg-3">
                 <label for="anioNacimiento" class="form-label">Año de Nacimiento:</label>
-                <input type="number" class="form-control" id="anioNacimiento">
+                <input type="number" class="form-control border-primary-subtle" id="anioNacimiento" min="1900"
+                    max="2023" required />
             </div>
-            <button type="" class="btn btn-primary  m-1">Crear </button>
-            <button type="" class="btn btn-secondary m-1">Mostrar Generacion </button>
-            <button type="" class="btn btn-secondary m-1">¿Es Mayor de edad? </button>
+            <div class="col-12 text-center mt-5">
+                <button type="submit" id="btnCrear" onclick="persona.crearPersona()"
+                    class="btn btn-primary w-50 m-1 col-12 col-md-6 col-lg-3">
+                    Crear
+                </button>
+            </div>
         </form>
+        <section id="sectionMostrarDatos" class="container"></section>
     </main>
-    <footer>
-
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
